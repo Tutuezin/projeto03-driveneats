@@ -1,7 +1,5 @@
 * {
   box-sizing: border-box;
-  /* font-family: "Righteous", cursive; */
-  /* font-family: 'Roboto', sans-serif; */
 }
 
 body {
@@ -41,9 +39,10 @@ body {
 }
 /* HEADER */
 
+/* MAIN */
 .container {
-  margin-top: 92px;
-  margin-left: 19px;
+  padding: 92px 0 108px 19px;
+  background-color: #eeeeee;
 }
 
 .requests {
@@ -66,23 +65,55 @@ body {
   overflow-x: scroll;
 }
 
-.choice {
+.dish,
+.drink,
+.dissert {
   display: flex;
   flex-direction: column;
 
   margin-right: 16px;
+  margin-bottom: 2px;
+  margin-top: 2px;
   padding: 18px 14px 14px 13px;
   width: 172px;
+
   border-radius: 9px;
-  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid #eeeeee;
+
+  box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
 }
 
-.choice > img {
+.dish > img,
+.drink > img,
+.dissert > img {
   border-radius: 4px;
   margin-bottom: 8px;
 }
 
-.choice > h4 {
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price img {
+  opacity: 0;
+}
+
+.price-checked {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-checked img {
+  opacity: 1;
+}
+
+.dish > h4,
+.drink > h4,
+.dissert > h4 {
   font-family: "Roboto", sans-serif;
   font-size: 16 px;
   font-weight: 700;
@@ -90,17 +121,63 @@ body {
   margin-bottom: 8px;
 }
 
-.choice > p {
+.dish > p,
+.drink > p,
+.dissert > p {
   font-family: "Roboto", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
-  color: rgba(166, 166, 166, 1);
 
   margin-bottom: 8px;
+
+  color: rgba(166, 166, 166, 1);
 }
 
-.choice > h5 {
+.dish h5,
+.drink h5,
+.dissert h5 {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
+}
+
+.checked {
+  border: 5px solid #00fb26;
+}
+
+/* MAIN */
+
+/* FOOTER */
+
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  height: 92px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.button {
+  height: 61px;
+  width: 364px;
+  border-style: none;
+  border-radius: 50px;
+  background-color: #cbcbcb;
+}
+
+.button h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
 }
